@@ -36,8 +36,11 @@ while (higherBound < maxArea){
   currentLink <- createLink(lowerBound, higherBound)
   i = 1
   page <- read_html( paste0(currentLink, i))
-  
+  #to nie działa
   maxPageNumber <- page %>% html_nodes(xpath='/html/body/div[1]/div[5]/div[1]/div/div/div/footer/div/nav/div/ul/li[*]') %>% html_text()
+  maxPageNumber
+  # to już działa ale nie widać footer
+  maxPageNumber <- page %>% html_nodes(xpath='/html/body/div[1]/div[5]/div[1]/div/div/div') %>% html_text()
   maxPageNumber
   
   tryCatch(
