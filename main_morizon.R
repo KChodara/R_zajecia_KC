@@ -61,7 +61,7 @@ while (higherBound < maxArea){
 write.table(as.list(offerLinks), file ="offers", row.names=FALSE, col.names=FALSE, sep=",")
 
 
-offerLinks <- fread('offersv', head=FALSE)
+offerLinks <- fread('offers', head=FALSE)
 
 
   # Pobieranie danych ogloszenia
